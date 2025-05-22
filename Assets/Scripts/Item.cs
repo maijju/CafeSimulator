@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "item", menuName = "ScriptableObjects/CafeItem")]
 public class Item : ScriptableObject
 {
     [SerializeField] string itemName;
