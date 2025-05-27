@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ItemList : ScriptableObject
 {
-    public List<Item> itemLists;
+    public List<SOItem> itemLists;
     
-    public void AddItemToList(Item item)
+    public void AddItemToList(SOItem item)
     {
         itemLists.Add(item);
     }

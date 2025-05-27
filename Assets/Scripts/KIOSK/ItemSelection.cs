@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ItemSelection : MonoBehaviour
 {
-    public Item selectedItem;
-    public List<Item> itemCart;
+    public SOItem selectedItem;
+    public List<SOItem> itemCart;
 
     public void ItemDetail()
     {

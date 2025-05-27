@@ -36,9 +36,9 @@ public class ItemPurchase : MonoBehaviour
     }
     public void CalcTotalPrice()
     {
-        foreach (Item item in itemSelection.itemCart)
+        foreach (SOItem item in itemSelection.itemCart)
         {
-            totalPrice += item.GetPrice();
+            totalPrice += item.price;
         }
     }
 }
