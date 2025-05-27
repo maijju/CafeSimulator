@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PosManager : MonoBehaviour
+public class PosController : MonoBehaviour
 {
     public Button addItem;
     public Button addCategory;
