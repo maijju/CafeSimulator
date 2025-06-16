@@ -4,21 +4,9 @@ using UnityEngine;
 
 public class NFCReader : MonoBehaviour, IPurchase
 {
-    int paymentResultCode;
-    private bool activateState = false;
-
-    public int Pay(int price)
+    public void Pay()
     {
-        return paymentResultCode;
+        print("Paid by NFC");
     }
 
-    public void Activate()
-    {
-        activateState = true;
-    }
-
-    public void Deactivate()
-    {
-        activateState = false;
-    }
 }

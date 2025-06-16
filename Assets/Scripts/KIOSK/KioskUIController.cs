@@ -5,15 +5,19 @@ using UnityEngine;
 
 public class KioskUIController : MonoBehaviour
 {
-    private KioskCategoryManager categoryTabManager;
+    private KioskCategoryManager kioskCategoryManager;
+    private KioskContentManager kioskContentManager;
+    private KioskCartManager kioskCartManager;
     void Awake()
     {
-        categoryTabManager = GetComponentInChildren<KioskCategoryManager>();
+        kioskCategoryManager = GetComponentInChildren<KioskCategoryManager>();
+        kioskContentManager = GetComponentInChildren<KioskContentManager>();
+        kioskCartManager = GetComponentInChildren<KioskCartManager>();
         
     }
     void Start()
     {
         print("Start");
-        categoryTabManager.Setup();
+        kioskCategoryManager.Setup();
     }
 }

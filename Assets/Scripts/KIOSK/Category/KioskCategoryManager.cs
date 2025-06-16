@@ -23,8 +23,6 @@ public class KioskCategoryManager : MonoBehaviour
         }
     }
 
-    
-
     void OnCategoryClicked(string categoryName)
     {
         Debug.Log("Selected category: " + categoryName);

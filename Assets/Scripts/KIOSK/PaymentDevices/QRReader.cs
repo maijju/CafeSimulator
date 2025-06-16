@@ -4,21 +4,9 @@ using UnityEngine;
 
 public class QRReader : MonoBehaviour, IPurchase
 {
-    int paymentResultCode;
-    private bool activateState = false;
-
-    public int Pay(int price)
+    public void Pay()
     {
-        return paymentResultCode;
+        print("Paid by QR");
     }
 
-    public void Activate()
-    {
-        activateState = true;
-    }
-
-    public void Deactivate()
-    {
-        activateState = false;
-    }
 }

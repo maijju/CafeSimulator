@@ -5,21 +5,8 @@ using UnityEngine;
 
 public class CardReader : MonoBehaviour, IPurchase
 {
-    int paymentResultCode;
-    private bool activateState = false;
-
-    public int Pay(int price)
+    public void Pay()
     {
-        return paymentResultCode;
-    }
-
-    public void Activate()
-    {
-        activateState = true;
-    }
-
-    public void Deactivate()
-    {
-        activateState = false;
+        print("Paid by Card");
     }
 }

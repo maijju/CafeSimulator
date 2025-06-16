@@ -9,6 +9,6 @@ public enum ETemperature
 public class SOCartItem : ScriptableObject
 {
     public string itemName;
-    public string price;
+    public int price;
     public ETemperature temperature;
 }

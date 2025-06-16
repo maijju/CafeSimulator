@@ -4,8 +4,5 @@ using UnityEngine;
 
 public interface IPurchase
 {
-    int Pay(int price)
-    {
-        return 0;
-    }
+    void Pay();
 }

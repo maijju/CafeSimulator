@@ -2,19 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Kinnly;
 using UnityEngine.UI;
+using System;
 
 public class KioskCartManager : MonoBehaviour
 {
     public List<SOItem> cart;
     public GameObject cartPrefab;
     public Transform cartPanel;
+    public Transform purchaseOptionPanel;
     public TextMeshProUGUI totalPrice;
     public Button purchaseBtn;
 
+    ItemPurchase itemPurchase;
+
     void Start()
     {
+        itemPurchase = purchaseOptionPanel.GetComponent<ItemPurchase>();
         purchaseBtn.onClick.AddListener(Purchase);
     }
     public void AddItemToCart(SOItem item)
@@ -59,8 +63,15 @@ public class KioskCartManager : MonoBehaviour
 
     public void Purchase()
     {
-        CafeManager.Instance.totalSales += int.Parse(totalPrice.text);
+        if (cart.Count <= 0) return;
+        purchaseOptionPanel.gameObject.SetActive(true);
+        itemPurchase.Setup(int.Parse(totalPrice.text));
+    }
+
+    public void SuccessPay()
+    {
         totalPrice.text = "0";
         ClearCart();
+        cart.Clear();
     }
 }

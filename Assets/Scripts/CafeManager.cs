@@ -4,6 +4,8 @@ using System.Collections.Generic;
 public class CafeManager : MonoBehaviour
 {
     public static CafeManager Instance { get; private set; }
+    public Transform kioskPanel;
+    public Transform posPanel;
 
     private void Awake()
     {
@@ -26,7 +28,7 @@ public class CafeManager : MonoBehaviour
         items.Add(item);
     }
 
-    public void RemoveCategory(SOItem item)
+    public void RemoveItem(SOItem item)
     {
         items.Remove(item);
     }
@@ -34,6 +36,7 @@ public class CafeManager : MonoBehaviour
     public void AddCategory(SOCategory category)
     {
         categories.Add(category);
+        kioskPanel.GetComponent<KioskCategoryManager>().Setup();
     }
 
     public void RemoveCategory(SOCategory category)
